@@ -6,8 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CandidatesTableSeeder' => $baseDir . '/database/seeds/CandidatesTableSeeder.php',
+    'CreateCandidatesTables' => $baseDir . '/database/migrations/2015_03_07_122356_create_candidates_tables.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
+    'CreateVotersTables' => $baseDir . '/database/migrations/2015_03_07_122320_create_voters_tables.php',
+    'CreateVotesTables' => $baseDir . '/database/migrations/2015_03_07_123339_create_votes_tables.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator/Facade.php',
@@ -424,4 +428,5 @@ return array(
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/Text/Template.php',
+    'VotersTableSeeder' => $baseDir . '/database/seeds/VotersTableSeeder.php',
 );

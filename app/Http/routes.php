@@ -10,13 +10,15 @@ Route::controllers([
 ]);
 
 
-Route::get('votes', 'VotesController');
-Route::get('voter', 'VoterController@create');
-Route::get('candidate', 'CandidateController');
-
 Route::model('voter', 'Voter');
-Route::model('votes', 'Votes');
-Route::model('candidate', 'Candidate');
+//Route::model('votes', 'Votes');
+//Route::model('candidate', 'Candidate');
+
+
+
+Route::resource('voters', 'VoterController');
+//Route::get('candidate', 'CandidateController');
+//Route::get('votes', 'VotesController');
 
 
 
@@ -24,13 +26,15 @@ Route::bind('voter', function($value, $route) {
 	return App\Voter::whereId($value)->first();
 });
 
-Route::bind('votes', function($value, $route) {
-	return App\Votes::whereId($value)->first();
-});
 
-Route::bind('candidate', function($value, $route) {
-	return App\Candidate::whereId($value)->first();
-});
+
+//Route::bind('votes', function($value, $route) {
+//	return App\Votes::whereId($value)->first();
+//});
+//
+//Route::bind('candidate', function($value, $route) {
+//	return App\Candidate::whereId($value)->first();
+//});
 
 
 //
